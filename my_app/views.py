@@ -21,9 +21,6 @@ def new_search(request):
 
     post_listings = soup.find_all('li', {'class': 'result-row'})
     post_listings_image_gallery = soup.find_all('a', {'class': 'result-image gallery'})
-    # print(post_listings[0])
-    # print('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-    # print(post_listings_image_gallery[0])
     final_postings =[]
 
     for post, price in zip(post_listings, post_listings_image_gallery):
